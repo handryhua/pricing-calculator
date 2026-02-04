@@ -99,18 +99,21 @@ function render() {
     const final = p.qty * p.price * (1 - getDiscount(p));
     const tr = document.createElement("tr");
 
+   const discountRate = getDiscountRate(p);
+   const final = p.qty * p.price * (1 - discountRate);
+
    tr.innerHTML = `
-  <td>${p.sku}</td>
-  <td>${p.displayName}</td>
-  <td>
-    <button onclick="changeQty('${p.sku}', -1)">−</button>
-    ${p.qty}
-    <button onclick="changeQty('${p.sku}', 1)">+</button>
-  </td>
-  <td>${p.price.toLocaleString("id-ID")}</td>
-  <td>${(discountRate * 100).toFixed(1)}%</td>
-  <td>${final.toLocaleString("id-ID")}</td>
-`;
+      <td>${p.sku}</td>
+      <td>${p.displayName}</td>
+      <td>
+        <button onclick="changeQty('${p.sku}', -1)">−</button>
+        ${p.qty}
+        <button onclick="changeQty('${p.sku}', 1)">+</button>
+      </td>
+      <td>${p.price.toLocaleString("id-ID")}</td>
+      <td>${(discountRate * 100).toFixed(2)}%</td>
+      <td>${final.toLocaleString("id-ID")}</td>
+   `;
     tbody.appendChild(tr);
   });
 
