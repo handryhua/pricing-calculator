@@ -74,7 +74,9 @@ function promoActive() {
 }
 
 function getDiscount(p) {
-  return promoActive() ? p.specialDiscount : 0.02;
+  if (p.qty <= 0) return 0;
+  if (!promoActive()) return 0.02;
+  return p.specialDiscount;
 }
 
 function balanceBonus() {
@@ -106,6 +108,7 @@ function render() {
     <button onclick="changeQty('${p.sku}', 1)">+</button>
   </td>
   <td>${p.price.toLocaleString("id-ID")}</td>
+  <td>${(discountRate * 100).toFixed(1)}%</td>
   <td>${final.toLocaleString("id-ID")}</td>
 `;
     tbody.appendChild(tr);
