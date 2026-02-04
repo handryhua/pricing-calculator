@@ -3,37 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <title>Pricing Calculator</title>
-
-  <!-- Mobile friendly -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <h2>Pricing Calculator</h2>
+<h2>Pricing Calculator</h2>
 
-  <!-- TABLE -->
-  <table>
-    <thead>
-      <tr>
-        <th>SKU</th>
-        <th>Product</th>
-        <th>Qty</th>
-        <th>Price</th>
-        <th>Discount</th>
-        <th>Final</th>
-      </tr>
-    </thead>
-    <tbody id="tableBody">
-      <!-- diisi oleh script.js -->
-    </tbody>
-  </table>
+<table>
+  <thead>
+    <tr>
+      <th>SKU</th>
+      <th>Product</th>
+      <th>Qty</th>
+      <th>Price</th>
+      <th>Discount</th>
+      <th>Final</th>
+      <th>Qty Bonus</th>
+    </tr>
+  </thead>
 
-  <!-- SCRIPT -->
-  <script src="script.js"></script>
+  <tbody id="tableBody"></tbody>
 
+  <!-- TOTAL ROW -->
+  <tfoot>
+    <tr>
+      <th colspan="3">Total Price</th>
+      <th id="totalPrice">0</th>
+      <th></th>
+      <th id="totalFinal">0</th>
+      <th id="totalBonus">0</th>
+    </tr>
+  </tfoot>
+</table>
+
+<script src="script.js"></script>
 </body>
 </html>
