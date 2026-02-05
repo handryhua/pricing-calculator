@@ -49,6 +49,8 @@ const totalPriceEl = document.getElementById("totalPrice");
 const totalFinalEl = document.getElementById("totalFinal");
 const totalBonusEl = document.getElementById("totalBonus");
 const balanceBonusEl = document.getElementById("balanceBonus");
+const floatingTotalFinalEl = document.getElementById("floatingTotalFinal");
+const floatingBalanceBonusEl = document.getElementById("floatingBalanceBonus");
 
 /* ========== HELPERS ========== */
 function countCategories() {
