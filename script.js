@@ -73,10 +73,9 @@ function render() {
          ${p.qty}
          <button onclick="changeQty('${p.sku}',1)">+</button>`;
 
-    const bonusCell = p.isBonus
-      ? `<button onclick="changeBonus('${p.sku}',-1)">−</button>
-         ${p.bonusQty}
-         <button onclick="changeBonus('${p.sku}',1)">+</button>`
+    const bonusCell = "-"
+    <td>${bonusCell}</td>
+      
       : "-";
 
     const tr = document.createElement("tr");
