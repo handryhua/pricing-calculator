@@ -13,9 +13,6 @@ const products = [
   { sku:"4682", category:"NEBU", name:"NE-C28", price:619500, maxDiscount:0.125, qty:0, bonusQty:0, isBonus:false },
   { sku:"E245", category:"EFT", name:"MC-246", price:56880, maxDiscount:0.058, qty:0, bonusQty:0, isBonus:false },
 
-  // BONUS PRODUCTS
-  { sku:"BONUS-MC246", category:"EFT", name:"MC-246 (BONUS)", price:56880, maxDiscount:0, qty:0, bonusQty:0, isBonus:true },
-  { sku:"BONUS-7120", category:"BPM", name:"HEM-7120 (BONUS)", price:408000, maxDiscount:0, qty:0, bonusQty:0, isBonus:true }
 ];
 
 /* ========= DOM ========= */
